@@ -9,8 +9,8 @@ import { Product } from '../product.model';
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [
-    new Product('A test Product', 'This is simple test', 'https://images.app.goo.gl/fjeyXDo8LGekkBeY9'),
-    new Product('A test Product', 'This is simple test', 'https://images.app.goo.gl/fjeyXDo8LGekkBeY9')
+    new Product('A test Product', 'This is simple test', 'https://images-na.ssl-images-amazon.com/images/I/51qgpZOgN-L._AC_.jpg'),
+    new Product('A test Product', 'This is simple test', 'https://images-na.ssl-images-amazon.com/images/I/51qgpZOgN-L._AC_.jpg')
   ];
 
   constructor() { }
