@@ -5,24 +5,23 @@
 </div>
 <hr>
 <div class="row">
-  <div class="col-xs-12">
-    <a 
-      href="#" 
-      class="list-group-item clearfix" 
+  <div class="col-sm-12">
+    <a
+      href="#"
+      class="list-group-item clearfix"
       *ngFor="let product of products">
-      <div class="float-left">
-        <h4 class="list-group-item-heading text-dark">{{ product.name }}</h4>
-        <p class="list-group-item-text text-dark">{{ product.description }}</p>
+      <div class="float-md-left">
+        <h4 class="list-group-item-heading">{{ product.name }}</h4>
+        <p class="list-group-item-text">{{ product.description }}</p>
       </div>
-      <span class="float-right">
-        <img 
-            src="{{ product.imagePath }}" 
-            alt="{{ product.name }}" 
-            class="ml-2 img-responsive" 
-            style="max-height: 50px;">
+      <span class="float-md-right">
+        <img
+          [src]="product.imagePath"
+          alt="{{ product.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
       </span>
     </a>
-    <app-product-item></app-product-item>  
+    <app-product-item></app-product-item>
   </div>
 </div>
-
