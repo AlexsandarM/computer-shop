@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-collapse-navbar',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollapseNavbarComponent implements OnInit {
 
-  public isMenuCollapsed = true;
+   public isMenuCollapsed = true;
+
+   @Output() featureSelected = new EventEmitter<string>();
+
+   onSelect(feature: string) {
+    this.featureSelected.emit(feature);
+   }
   
   constructor() { }
 
