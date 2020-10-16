@@ -12,6 +12,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CollapseNavbarComponent } from './header/collapse-navbar/collapse-navbar.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CollapseNavbarComponent } from './header/collapse-navbar/collapse-navba
     ShoppingListComponent,
     ShoppingEditComponent,
     CollapseNavbarComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
