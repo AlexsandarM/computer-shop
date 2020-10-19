@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Accessorie } from '../shared/accessories.model'
+import { ShoppingListService } from './shopping-list.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -8,17 +9,17 @@ import { Accessorie } from '../shared/accessories.model'
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-  accessories: Accessorie[] = [
-    new Accessorie('Printer', 1),
-    new Accessorie('Speakers', 1)
-  ];
+  accessories: Accessorie[];
 
-  constructor() { }
+  constructor(private slService: ShoppingListService) { }
 
   ngOnInit(): void {
-  }
-
-  onAccessorieAdded(accessorie: Accessorie) {
-    this.accessories.push(accessorie);
+    this.accessories = this.slService.getAccessorie();
+    this.slService.accessorieChanged
+      .subscribe(
+        (accessories: Accessorie[]) => {
+          this.accessories = accessories;
+        }
+      )
   }
 }

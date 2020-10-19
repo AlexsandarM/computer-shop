@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
@@ -9,7 +9,6 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  @Output() productWasSelected = new EventEmitter<Product>();
 
   products: Product[];
 
@@ -17,10 +16,6 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.products = this.productService.getProduct();
-  }
-
-  onProductSelected(product: Product) {
-    this.productWasSelected.emit(product);
   }
 
 }
