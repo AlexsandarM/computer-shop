@@ -10,13 +10,13 @@
   <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
     <ul class="nav navbar-nav mx-auto">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="'.'" (click)="onSelect('home')">Home</a>
+        <a class="nav-link" routerLink]="/home" (click)="onSelect('home')">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'.'" (click)="onSelect('product')">Products</a>
+        <a class="nav-link" routerLink="/products" (click)="onSelect('product')">Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'.'" (click)="onSelect('shopping-list')">Shopping List</a>
+        <a class="nav-link" routerLink="/shopping-list" (click)="onSelect('shopping-list')">Shopping List</a>
       </li>
     </ul>
     <ul class="nav navbar-nav ml-auto">
